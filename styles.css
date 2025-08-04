@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-around;
+    justify-content: center;
+    background-color: #A8A8A8;
+    margin: 0 auto;
+}
+
+#playlist {
+    display: none;
+}
+
+div {
+    float: left;
+    padding: 15px;
+}
+
+.forward {
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 74px;
+    height: 74px;
+    border-color: transparent transparent transparent #202020;
+    transition: 100ms all ease;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 37px 0 37px 60px;
+}
+
+.backward {
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 74px;
+    height: 74px;
+    border-color: transparent #202020 transparent transparent;
+    transition: 100ms all ease;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 37px 60px 37px 0px;
+}
+
+.playpause {
+    label {
+        display: block;
+        box-sizing: border-box;
+        width: 0;
+        height: 74px;
+
+        border-color: transparent transparent transparent #202020;
+        transition: 100ms all ease;
+        cursor: pointer;
+        border-style: double;
+        border-width: 0px 0 0px 60px;
+    }
+
+    input[type="checkbox"] {
+        position: absolute;
+        left: -9999px;
+
+        &:checked+label {
+            border-style: solid;
+            border-width: 37px 0 37px 60px;
+        }
+
+        &:focus+label {
+            box-shadow: 0 0 5px lightblue;
+            border-color: transparent transparent transparent #404040;
+        }
+    }
+}
+
+.slider {
+    -webkit-appearance: none;
+    margin-left: 70px;
+    appearence: none;
+    border-radius: 30px;
+    background-color: #333333;
+    height: 50px;
+    opacity: 1;
+    -webkit-transition: .5s;
+    transition: opacity .5s;
+}
+
+.slider:hover {
+    opacity: 0.8;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 10px double #333333;
+    border-radius: 20%;
+    background: #ffffff;
+}

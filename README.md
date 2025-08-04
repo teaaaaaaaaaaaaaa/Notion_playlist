@@ -1,2 +1,2 @@
-# Notion_playlist
--_-
+# YoutubeMusicWidget
+Custom widget for Notion based on Youtube Music API

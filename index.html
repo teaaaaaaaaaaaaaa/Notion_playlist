@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <iframe id="playlist"
+        src="https://www.youtube.com/embed/videoseries?list=PLq7Mvbpi6dNPdvCp2B1__cc5wqg8HibhI&enablejsapi=1"
+        referrerpolicy="no-referrer-when-downgrade"
+        frameborder="0"></iframe>
+    <div>
+        <label id="title" style="color: white" />
+    </div>
+    <div id="buttons">
+        <div class="button1">
+            <input class="backward" type="button" value="Backward" id=BACKWARD />
+        </div>
+        <div class="playpause">
+            <input type="checkbox" value="None" id="playpause" name="check" />
+            <label for="playpause"></label>
+        </div>
+        <div class="button2">
+            <input class="forward" type="button" value="Forward" id=FORWARD />
+        </div>
+    </div>
+
+    <div class="slidecontainer" id=VOLUME>
+        <input type="range" min="0" max="100" value="50" class="slider" id="myRange">
+    </div>
+    <script src="app.js" async></script>
+</body>
+
+</html>
